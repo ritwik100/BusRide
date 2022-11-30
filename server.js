@@ -1,7 +1,7 @@
 const express = require("express");
 const app = express();
 require("dotenv").config();
-const dbConfig = require("./config/dbConfig");
+const dbconfig = require("./config/dbconfig");
 const port = process.env.PORT || 5000;
 app.use(express.json());
 
