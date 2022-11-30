@@ -1,0 +1,31 @@
+{
+  "name": "bus-ride",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "setup-production": "npm run install-client && npm run build-client && npm install",
+    "install-client": "cd client && npm install",
+    "build-client": "cd client && npm run build",
+    "server": "nodemon server --ignore client",
+    "client": "npm start --prefix client",
+    "start": "concurrently --kill-others-on-fail \"npm run server\" \" npm run client\""
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@stripe/stripe-js": "^1.41.0",
+    "bcryptjs": "^2.4.3",
+    "dotenv": "^16.0.2",
+    "express": "^4.18.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^6.6.2",
+    "nodemailer": "^6.7.8",
+    "nodemon": "^2.0.20",
+    "stripe": "^10.14.0",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0"
+  }
+}
